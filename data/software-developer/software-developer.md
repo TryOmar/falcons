@@ -127,12 +127,7 @@ addEventHandler("onClientRender", root, "nonexistentFunction") -- A developer at
 ### Answer
 
 ~~~lua
-function renderHandling()
-    -- rendering code here
-end
-
 addEventHandler("onClientRender", root, renderHandling)
-~~~
 
 ---
 
@@ -231,6 +226,7 @@ local button = guiCreateButton(150, 200, 100, 50, "Click Me", false)
 ~~~
 
 ---
+
 ## L2- 15. fixMemoWidth
 
 ### Question
@@ -242,10 +238,11 @@ local memo = guiCreateMemo(300, 200, "invalidWidth", 100, "Enter text...", false
 ### Answer
 
 ~~~lua
-ans
+local memo = guiCreateMemo(300, 200, 250, 100, "Enter text...", false)
 ~~~
 
 ---
+
 ## L2- 16. fixImageHeight
 
 ### Question
@@ -257,10 +254,11 @@ local image = guiCreateStaticImage(400, 300, 100, "invalidHeight", "image.png", 
 ### Answer
 
 ~~~lua
-ans
+local image = guiCreateStaticImage(400, 300, 100, 80, "image.png", false)
 ~~~
 
 ---
+
 ## L2- 17. fixLabelHeight
 
 ### Question
@@ -272,10 +270,11 @@ local label = guiCreateLabel(10, 20, 200, "invalidHeight", "Hello World", false)
 ### Answer
 
 ~~~lua
-ans
+local label = guiCreateLabel(10, 20, 200, 30, "Hello World", false)
 ~~~
 
 ---
+
 ## L2- 18. fixProgressBarParent
 
 ### Question
@@ -287,10 +286,11 @@ local progressBar = guiCreateProgressBar(50, 100, 200, 30, "invalidParent") -- T
 ### Answer
 
 ~~~lua
-ans
+local progressBar = guiCreateProgressBar(50, 100, 200, 30, nil)
 ~~~
 
 ---
+
 ## L3- 19. fixEditBoxWidth 
 
 ### Question
@@ -302,7 +302,7 @@ local editBox = guiCreateEdit(100, 200, "invalidWidth", 30, "Text", false) -- Th
 ### Answer
 
 ~~~lua
-ans
+local editBox = guiCreateEdit(100, 200, 150, 30, "Text", false)
 ~~~
 
 ---
@@ -318,10 +318,11 @@ local gridList = guiCreateGridList(300, 400, 250, "invalidHeight", false) -- The
 ### Answer
 
 ~~~lua
-ans
+local gridList = guiCreateGridList(300, 400, 250, 300, false)
 ~~~
 
 ---
+
 ## L3- 21. fixCheckBoxY
 
 ### Question
@@ -331,6 +332,12 @@ local checkBox = guiCreateCheckBox(50, "invalidY", 150, 20, "Check Me", false, f
 ~~~
 
 ### Answer
+
+~~~lua
+local checkBox = guiCreateCheckBox(50, 100, 150, 20, "Check Me", false, false)
+~~~
+
+---
 
 ## L3- 22. fixRadioButtonX
 
@@ -343,8 +350,11 @@ local radioButton = guiCreateRadioButton("invalidX", 200, 120, 20, "Option", fal
 ### Answer
 
 ~~~lua
-ans
+local radioButton = guiCreateRadioButton(75, 200, 120, 20, "Option", false)
 ~~~
+
+---
+
 ## L3- 23. fixTabPanelHeight 
 
 ### Question
@@ -356,10 +366,11 @@ local tabPanel = guiCreateTabPanel(10, 10, 400, "invalidHeight", false) -- The d
 ### Answer
 
 ~~~lua
-ans
+local tabPanel = guiCreateTabPanel(10, 10, 400, 250, false)
 ~~~
 
 ---
+
 ## L3- 24. fixTabParent
 
 ### Question
@@ -371,10 +382,11 @@ local tab = guiCreateTab("My Tab", "invalidParent") -- The developer used an inv
 ### Answer
 
 ~~~lua
-ans
+local tab = guiCreateTab("My Tab", tabPanel)
 ~~~
 
 ---
+
 ## L4- 25. fixAdditionFunction
 
 ### Question
@@ -388,7 +400,9 @@ end
 ### Answer
 
 ~~~lua
-ans
+function addNumbers(a, b)
+    return tonumber(a) + tonumber(b)
+end
 ~~~
 
 ---

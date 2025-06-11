@@ -4,54 +4,34 @@ Each question is labeled (e.g., `L4 - 27`) and includes both the original code (
 
 ---
 
-## L4 - 27
+## L0- 1. fixBlipID
 
 ### Question
 
 ~~~lua
-function kickAFKPlayers()
-    for i, player in ipairs(getElementsByType("player")) do
-        local lastMove = getElementData("lastMoveTime") -- Forgot to specify the player.
-        if (lastMove and getTickCount() - lastMove > 300000) then -- Make it only kick logged in players using isGuestAccount and getPlayerAccount inside it.
-            kickPlayer(player, "AFK too long")
-        end
-    end
-end
-
--- A developer tried to kick AFK players but made multiple mistakes.
--- Hint: Ensure the player is logged in.
--- Check if the account isn't a guest one, and getPlayerAccount(argument).
+local blip = createBlip(1500, -1500, '3') -- A developer incorrectly used a string instead of a number for the blip ID. Fix it by using a numeric ID.
 ~~~
 
 ### Answer
 
 ~~~lua
-function kickAFKPlayers()
-    for i, player in ipairs(getElementsByType("player")) do
-        local lastMove = getElementData(player, "lastMoveTime")
-        if (lastMove and getTickCount() - lastMove > 300000 and not isGuestAccount(getPlayerAccount(player))) then
-            kickPlayer(player, "AFK too long")
-        end
-    end
-end
+answer.
 ~~~
 
 ---
 
-## L4 - XX
+## L0- 2. fixVehicleModel
 
 ### Question
 
 ~~~lua
--- Add your next question here.
--- Replace XX with the proper number (e.g., 28, 29).
--- Include the code and hints if any.
+local vehicle = createVehicle("InvalidModel", 1520, -1520, 13) -- A developer used an invalid model name instead of a model ID. The correct model ID should be 411.
 ~~~
 
 ### Answer
 
 ~~~lua
--- Provide the corrected or ideal solution here.
+answer
 ~~~
 
 ---

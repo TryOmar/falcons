@@ -15,7 +15,7 @@ local blip = createBlip(1500, -1500, '3') -- A developer incorrectly used a stri
 ### Answer
 
 ~~~lua
-answer.
+local blip = createBlip(1500, -1500, 3)
 ~~~
 
 ---
@@ -31,7 +31,7 @@ local vehicle = createVehicle("InvalidModel", 1520, -1520, 13) -- A developer us
 ### Answer
 
 ~~~lua
-answer
+local vehicle = createVehicle(411, 1520, -1520, 13)
 ~~~
 
 ---

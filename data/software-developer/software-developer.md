@@ -35,6 +35,7 @@ local vehicle = createVehicle(411, 1520, -1520, 13)
 ~~~
 
 ---
+
 ## L0- 3. fixPedModel
 
 ### Question
@@ -46,11 +47,11 @@ local ped = createPed(999, 1530, -1530, 13) -- A developer used an invalid ped m
 ### Answer
 
 ~~~lua
-answer
+local ped = createPed(0, 1530, -1530, 13)
 ~~~
 
 ---
----
+
 ## L0- 4. fixPickupType
 
 ### Question
@@ -62,12 +63,11 @@ local pickup = createPickup(0, 0, 3, "invalidType") -- The developer used an inv
 ### Answer
 
 ~~~lua
-answer
+local pickup = createPickup(0, 0, 3, 3)
 ~~~
 
 ---
 
----
 ## L0- 5. fixMarkerShape
 
 ### Question
@@ -79,10 +79,11 @@ local marker = createMarker(10, 10, 3, "unknownShape") -- The developer used an 
 ### Answer
 
 ~~~lua
-answer
+local marker = createMarker(10, 10, 3, "cylinder")
 ~~~
 
 ---
+
 ## L0- 6. fixColShapeRadius
 
 ### Question
@@ -94,7 +95,7 @@ local colShape = createColCircle(10, 10, "invalidRadius") -- The developer set a
 ### Answer
 
 ~~~lua
-answer
+local colShape = createColCircle(10, 10, 5)
 ~~~
 
 ---
@@ -110,10 +111,12 @@ setTimer("invalidFunction", 1000, 1) -- A developer tried to use a string instea
 ### Answer
 
 ~~~lua
-ans
+setTimer(function() outputChatBox("Timer completed!") end, 1000, 1)
 ~~~
 
----## L1- 8.fixRenderHandler
+---
+
+## L1- 8. fixRenderHandler
 
 ### Question
 
@@ -124,11 +127,16 @@ addEventHandler("onClientRender", root, "nonexistentFunction") -- A developer at
 ### Answer
 
 ~~~lua
-ans
+function renderHandling()
+    -- rendering code here
+end
+
+addEventHandler("onClientRender", root, renderHandling)
 ~~~
 
 ---
-## L1- 9.fixCustomEvent
+
+## L1- 9. fixCustomEvent
 
 ### Question
 
@@ -139,10 +147,11 @@ addEvent("invalidEvent", false) -- The developer used an invalid event name. Cha
 ### Answer
 
 ~~~lua
-ans
+addEvent("validEvent", true)
 ~~~
 
 ---
+
 ## L1- 10. fixShaderFile
 
 ### Question
@@ -154,11 +163,12 @@ local shader = dxCreateShader("invalid.fx") -- The developer used a missing shad
 ### Answer
 
 ~~~lua
-ans
+local shader = dxCreateShader("valid.fx")
 ~~~
 
 ---
-## L1- 11.fixTextPosition
+
+## L1- 11. fixTextPosition
 
 ### Question
 
@@ -169,10 +179,11 @@ dxDrawText("Hello", "invalidX", 500) -- The developer used an invalid X coordina
 ### Answer
 
 ~~~lua
-ans
+dxDrawText("Hello", 300, 500)
 ~~~
 
 ---
+
 ## L1- 12. fixSoundFile
 
 ### Question
@@ -184,11 +195,12 @@ local sound = playSound("invalid.mp3") -- The developer referenced a missing sou
 ### Answer
 
 ~~~lua
-ans
+local sound = playSound("valid.mp3")
 ~~~
 
 ---
-## L2- 13.FixGUIWindowPosition
+
+## L2- 13. FixGUIWindowPosition
 
 ### Question
 
@@ -199,10 +211,11 @@ local window = guiCreateWindow(500, "invalidY", 300, 400, "My Window", false) --
 ### Answer
 
 ~~~lua
-ans
+local window = guiCreateWindow(500, 200, 300, 400, "My Window", false)
 ~~~
 
 ---
+
 ## L2- 14. fixButtonPosition
 
 ### Question
@@ -214,7 +227,8 @@ local button = guiCreateButton("invalidX", 200, 100, 50, "Click Me", false) -- T
 ### Answer
 
 ~~~lua
-ans
+local button = guiCreateButton(150, 200, 100, 50, "Click Me", false)
 ~~~
 
 ---
+

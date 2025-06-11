@@ -35,3 +35,67 @@ local vehicle = createVehicle(411, 1520, -1520, 13)
 ~~~
 
 ---
+## L0- 3. fixPedModel
+
+### Question
+
+~~~lua
+local ped = createPed(999, 1530, -1530, 13) -- A developer used an invalid ped model ID. The correct model ID is 0.
+~~~
+
+### Answer
+
+~~~lua
+answer
+~~~
+
+---
+---
+## L0- 4. fixPickupType
+
+### Question
+
+~~~lua
+local pickup = createPickup(0, 0, 3, "invalidType") -- The developer used an invalid pickup type. Use a valid pickup type which is 3.
+~~~
+
+### Answer
+
+~~~lua
+answer
+~~~
+
+---
+
+---
+## L0- 5. fixMarkerShape
+
+### Question
+
+~~~lua
+local marker = createMarker(10, 10, 3, "unknownShape") -- The developer used an unknown shape. Use a valid shape which is "cylinder".
+~~~
+
+### Answer
+
+~~~lua
+answer
+~~~
+
+---
+---
+## L0- 6. fixColShapeRadius
+
+### Question
+
+~~~lua
+local colShape = createColCircle(10, 10, "invalidRadius") -- The developer set an invalid radius. Use a valid radius which is 5.
+~~~
+
+### Answer
+
+~~~lua
+answer
+~~~
+
+---

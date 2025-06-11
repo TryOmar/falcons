@@ -231,4 +231,164 @@ local button = guiCreateButton(150, 200, 100, 50, "Click Me", false)
 ~~~
 
 ---
+## L2- 15. fixMemoWidth
 
+### Question
+
+~~~lua
+local memo = guiCreateMemo(300, 200, "invalidWidth", 100, "Enter text...", false) -- The developer used an invalid width. Use 250.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L2- 16. fixImageHeight
+
+### Question
+
+~~~lua
+local image = guiCreateStaticImage(400, 300, 100, "invalidHeight", "image.png", false) -- The developer used an invalid height. Use 80.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L2- 17. fixLabelHeight
+
+### Question
+
+~~~lua
+local label = guiCreateLabel(10, 20, 200, "invalidHeight", "Hello World", false) -- The developer used an invalid height. Use 30.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L2- 18. fixProgressBarParent
+
+### Question
+
+~~~lua
+local progressBar = guiCreateProgressBar(50, 100, 200, 30, "invalidParent") -- The developer set an invalid parent. Use nil for no parent.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L3- 19. fixEditBoxWidth 
+
+### Question
+
+~~~lua
+local editBox = guiCreateEdit(100, 200, "invalidWidth", 30, "Text", false) -- The developer used an invalid width. Use 150.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+
+## L3- 20. fixGridListHeight
+
+### Question
+
+~~~lua
+local gridList = guiCreateGridList(300, 400, 250, "invalidHeight", false) -- The developer used an invalid height. Use 300.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L3- 21. fixCheckBoxY
+
+### Question
+
+~~~lua
+local checkBox = guiCreateCheckBox(50, "invalidY", 150, 20, "Check Me", false, false) -- The developer used an invalid Y coordinate. Use 100.
+~~~
+
+### Answer
+
+## L3- 22. fixRadioButtonX
+
+### Question
+
+~~~lua
+local radioButton = guiCreateRadioButton("invalidX", 200, 120, 20, "Option", false) -- The developer used an invalid X coordinate. Use 75.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+## L3- 23. fixTabPanelHeight 
+
+### Question
+
+~~~lua
+local tabPanel = guiCreateTabPanel(10, 10, 400, "invalidHeight", false) -- The developer used an invalid height. Use 250.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L3- 24. fixTabParent
+
+### Question
+
+~~~lua
+local tab = guiCreateTab("My Tab", "invalidParent") -- The developer used an invalid parent. The valid tab panel parent name is 'tabPanel'.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L4- 25. fixAdditionFunction
+
+### Question
+
+~~~lua
+function addNumbers(a, b)
+    return a + b -- The developer forgot to convert a and b to numbers. Ensure they are numbers before adding. (keep the function this way, but with ensuring a and b are numbers
+end
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---

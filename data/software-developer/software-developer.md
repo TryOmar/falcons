@@ -128,6 +128,7 @@ addEventHandler("onClientRender", root, "nonexistentFunction") -- A developer at
 
 ~~~lua
 addEventHandler("onClientRender", root, renderHandling)
+~~~
 
 ---
 

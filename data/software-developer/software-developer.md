@@ -83,7 +83,6 @@ answer
 ~~~
 
 ---
----
 ## L0- 6. fixColShapeRadius
 
 ### Question
@@ -96,6 +95,126 @@ local colShape = createColCircle(10, 10, "invalidRadius") -- The developer set a
 
 ~~~lua
 answer
+~~~
+
+---
+
+## L1- 7. fixTimerFunction
+
+### Question
+
+~~~lua
+setTimer("invalidFunction", 1000, 1) -- A developer tried to use a string instead of a valid function. Use an embedded function that output to chatbox "Timer completed!" once in a second.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---## L1- 8.fixRenderHandler
+
+### Question
+
+~~~lua
+addEventHandler("onClientRender", root, "nonexistentFunction") -- A developer attached a non-existent function. The correct function name is "renderHandling".
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L1- 9.fixCustomEvent
+
+### Question
+
+~~~lua
+addEvent("invalidEvent", false) -- The developer used an invalid event name. Change it to "validEvent". Also the event needs to be triggerable remotely so arg 2 should be true.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L1- 10. fixShaderFile
+
+### Question
+
+~~~lua
+local shader = dxCreateShader("invalid.fx") -- The developer used a missing shader file. Use "valid.fx".
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L1- 11.fixTextPosition
+
+### Question
+
+~~~lua
+dxDrawText("Hello", "invalidX", 500) -- The developer used an invalid X coordinate. Replace it with 300.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L1- 12. fixSoundFile
+
+### Question
+
+~~~lua
+local sound = playSound("invalid.mp3") -- The developer referenced a missing sound file. Use "valid.mp3".
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L2- 13.FixGUIWindowPosition
+
+### Question
+
+~~~lua
+local window = guiCreateWindow(500, "invalidY", 300, 400, "My Window", false) -- The developer used an invalid Y coordinate. Use 200.
+~~~
+
+### Answer
+
+~~~lua
+ans
+~~~
+
+---
+## L2- 14. fixButtonPosition
+
+### Question
+
+~~~lua
+local button = guiCreateButton("invalidX", 200, 100, 50, "Click Me", false) -- The developer used an invalid X coordinate. Use 150.
+~~~
+
+### Answer
+
+~~~lua
+ans
 ~~~
 
 ---
